@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+:root {
+  --height-header: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin:0;
+  padding:0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  background-color: rgb(32, 32, 32);
   display: flex;
-  flex-direction: column;
+  
+}
+
+.logo img {
+  display: block;
+  height: var(--height-header);
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  background-color: rgb(41, 41, 41);
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: var(--height-header);
+  padding-left: 10px;
+}
+
+button {
+  background-color: rgb(41, 41, 41);
   color: white;
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 25px; 
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: rgb(95, 95, 95);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gamephoto {
+  display: flex;
+  justify-content: center;
+  margin: 9px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  color: aliceblue;
+  width: 400px;
+ padding: 20px;
+}
+
+.dw {
+  display: flex;
+  justify-content: center;
+}
+
+
+footer {
+  background-color: rgb(32, 32, 32);
+}
+
+.content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: rgb(56, 56, 56);
+  padding: 0px 0px 80px 0px;
+}
+
+footer {
+  color: rgba(240, 248, 255, 0.164);
+}
+
+i {
+  padding-right: 5px;
+}
+
+footer {
+  padding: 0px 0px 100% 0px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.icondisc {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: rgba(240, 248, 255, 0.164);
+}
+
+a:hover {
+  color: rgba(240, 248, 255, 0.651);
+}
+
+.linkedin {
+  padding-right: 50px;
+}
+
+.discord {
+  padding-right: 50px;
+}
+
+.propisite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-top: 0px;
 }
