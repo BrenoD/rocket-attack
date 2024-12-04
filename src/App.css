@@ -1,131 +1,162 @@
 :root {
   --height-header: 60px;
+  --primary-bg: #1c1c1c;
+  --secondary-bg: #282828;
+  --text-color: #ffffff;
+  --button-bg: #3a3a3a;
+  --button-hover: #505050;
+  --icon-color: rgba(240, 248, 255, 0.8);
+  --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  background-color: rgb(32, 32, 32);
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.header {
   display: flex;
-  
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-bg);
+  padding: 10px 20px;
+  height: var(--height-header);
+  box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .logo img {
-  display: block;
   height: var(--height-header);
 }
 
 h2 {
-  color: rgb(255, 255, 255);
-  background-color: rgb(41, 41, 41);
   display: flex;
   align-items: center;
-  height: var(--height-header);
-  padding-left: 10px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-button {
-  background-color: rgb(41, 41, 41);
-  color: white;
-  border: none;
-  padding: 8px 15px;
+h2:hover {
+  color: #ffa500;
+}
+
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  cursor: pointer;
-  border-radius: 25px; 
+  animation: fadeIn 1s ease-in-out;
 }
 
-button:hover {
-  background-color: rgb(95, 95, 95);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .gamephoto {
   display: flex;
   justify-content: center;
-  margin: 9px;
+  gap: 20px;
+}
+
+.gamephoto img.small-photo {
+  max-width: 200px; /* Tamanho reduzido */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gamephoto img.small-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px var(--shadow-color);
 }
 
 .description {
-  display: flex;
-  justify-content: center;
+  max-width: 600px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.download-link {
+  text-decoration: none;
+}
+
+.download-button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.download-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.footer {
+  background-color: var(--secondary-bg);
+  padding: 20px;
   text-align: center;
-  margin: 0 auto;
-  color: aliceblue;
-  width: 400px;
- padding: 20px;
+  box-shadow: 0 -4px 6px var(--shadow-color);
 }
 
-.dw {
-  display: flex;
-  justify-content: center;
-}
-
-
-footer {
-  background-color: rgb(32, 32, 32);
-}
-
-.content {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  background-color: rgb(56, 56, 56);
-  padding: 0px 0px 80px 0px;
-}
-
-footer {
-  color: rgba(240, 248, 255, 0.164);
-}
-
-i {
-  padding-right: 5px;
-}
-
-footer {
-  padding: 0px 0px 100% 0px;
+.propisite {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .icons {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  gap: 20px;
 }
 
-.icondisc {
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-}
-a {
+.icon {
+  color: var(--icon-color);
   text-decoration: none;
-  color: rgba(240, 248, 255, 0.164);
-}
-
-a:hover {
-  color: rgba(240, 248, 255, 0.651);
-}
-
-.linkedin {
-  padding-right: 50px;
-}
-
-.discord {
-  padding-right: 50px;
-}
-
-.propisite {
+  font-size: 1.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.2s;
 }
 
-.App {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  margin-top: 0px;
+.icon:hover {
+  color: #ffa500;
+  transform: scale(1.1);
 }
